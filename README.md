@@ -109,12 +109,6 @@ department
 resource
 time_slot
 booking
-Key Relationships:
-One User → Many Bookings
-One Resource → Many Bookings
-One TimeSlot → Many Bookings
-One Department → Many Resources
-
 🔐 Authentication & Authorization
 Spring Security based authentication
 Role-based access:
