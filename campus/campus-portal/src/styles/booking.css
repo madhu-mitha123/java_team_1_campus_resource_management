@@ -1,0 +1,81 @@
+.booking-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  background: #f4f6f9;
+}
+
+.booking-container {
+  background: white;
+  padding: 40px;
+  width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.time-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.time-slot {
+  padding: 10px 15px;
+  background: #e0e7ff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.time-slot.selected {
+  background: #4f46e5;
+  color: white;
+}
+
+.time-slot.booked {
+  background: #f87171;
+  color: white;
+  cursor: not-allowed;
+}
+
+.confirm-btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.confirm-btn:hover {
+  background: #1e40af;
+}
+
+.error-text {
+  color: red;
+  margin-top: 10px;
+}
+
+.success-text {
+  color: green;
+  margin-top: 10px;
+}
+
+.role-text {
+  font-size: 14px;
+  color: #666;
+}

@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* ─── Layout ─────────────────────────────────────────────── */
+.bookingContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%);
+  font-family: 'Inter', sans-serif;
+  padding: 0 0 3rem;
+}
+
+.mainContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ─── Header ─────────────────────────────────────────────── */
+.header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.pageTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin: 0;
+}
+
+.backButton {
+  padding: 0.5rem 1.2rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #4a5568;
+  transition: all 0.2s;
+}
+
+.backButton:hover {
+  background: #edf2f7;
+  border-color: #cbd5e0;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* ─── Role Badge ─────────────────────────────────────────── */
+.roleBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.roleADMIN {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.roleSTAFF {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.roleSTUDENT {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* ─── Glass Card ─────────────────────────────────────────── */
+.glassCard {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Section Titles ─────────────────────────────────────── */
+.sectionTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 1rem;
+}
+
+/* ─── Date Input ─────────────────────────────────────────── */
+.dateInput {
+  padding: 0.6rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  color: #2d3748;
+  transition: border-color 0.2s;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* ─── Resource Grid ──────────────────────────────────────── */
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.resourceCard {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.resourceCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #a3bffa;
+}
+
+.resourceCard.selected {
+  border-color: #4c51bf;
+  background: #ebf4ff;
+  box-shadow: 0 0 0 3px rgba(76, 81, 191, 0.15);
+}
+
+.cardTitle {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #2d3748;
+  margin-bottom: 0.4rem;
+}
+
+.cardMeta {
+  font-size: 0.82rem;
+  color: #718096;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Status Badge ───────────────────────────────────────── */
+.statusBadge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.AVAILABLE {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.MAINTENANCE {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.UNAVAILABLE {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* ─── Slot Grid ──────────────────────────────────────────── */
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.timeSlot {
+  padding: 0.75rem 0.5rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid transparent;
+  line-height: 1.4;
+}
+
+/* Slot statuses */
+.available {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #6ee7b7;
+}
+
+.available:hover {
+  background: #a7f3d0;
+  transform: scale(1.04);
+}
+
+.pending {
+  background: #fef9c3;
+  color: #854d0e;
+  border-color: #fde047;
+  cursor: not-allowed;
+}
+
+.booked {
+  background: #fee2e2;
+  color: #991b1b;
+  border-color: #fca5a5;
+  cursor: not-allowed;
+}
+
+.disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.selected {
+  background: #4c51bf !important;
+  color: white !important;
+  border-color: #3730a3 !important;
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(76, 81, 191, 0.3);
+}
+
+.noSlots {
+  text-align: center;
+  color: #9ca3af;
+  padding: 2rem;
+  font-style: italic;
+}
+
+/* ─── Action Button ──────────────────────────────────────── */
+.actionButton {
+  margin-top: 1.5rem;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.35);
+}
+
+.actionButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(102, 126, 234, 0.45);
+}
+
+.actionButton:disabled {
+  background: #e2e8f0;
+  color: #a0aec0;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+/* ─── Alerts ─────────────────────────────────────────────── */
+.alert {
+  padding: 0.85rem 1.25rem;
+  border-radius: 10px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.alertError {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fca5a5;
+}
+
+.alertSuccess {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #6ee7b7;
+}
+
+.alertInfo {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+/* ─── Admin Table ────────────────────────────────────────── */
+.adminTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.adminTable th {
+  background: #f7fafc;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #4a5568;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.adminTable td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #2d3748;
+  vertical-align: middle;
+}
+
+.adminTable tr:hover td {
+  background: #f7fafc;
+}
+
+.approveBtn {
+  padding: 0.4rem 1rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.approveBtn:hover {
+  background: #059669;
+}
+
+.rejectBtn {
+  padding: 0.4rem 1rem;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.82rem;
+  transition: background 0.2s;
+}
+
+.rejectBtn:hover {
+  background: #dc2626;
+}
+
+.reasonInput {
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  width: 150px;
+}
+
+/* ─── Book Cards ─────────────────────────────────────────── */
+.bookCard {
+  background: rgba(255, 255, 255, 0.85);
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+.bookCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #a3bffa;
+}
+
+.bookCard.selected {
+  border-color: #4c51bf;
+  background: #ebf4ff;
+}
+
+/* ─── Legend ─────────────────────────────────────────────── */
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  font-size: 0.82rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* ─── Search Input ───────────────────────────────────────── */
+.searchInput {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  background: white;
+  margin-bottom: 1rem;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15);
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .resourceGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .slotGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .adminTable {
+    font-size: 0.78rem;
+  }
+}
